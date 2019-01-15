@@ -20,10 +20,6 @@ var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [];
 // symbols:
-(lib._572222_Vignett = function() {
-	this.initialize(img._572222_Vignett);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,2048,1536);
 (lib.Artboard1 = function() {
 	this.initialize(img.Artboard1);
 }).prototype = p = new cjs.Bitmap();
@@ -115,7 +111,11 @@ p.nominalBounds = new cjs.Rectangle(0,0,1600,2000);
 (lib.VAR_Anlegg = function() {
 	this.initialize(img.VAR_Anlegg);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,2343,2324);// helper functions:
+p.nominalBounds = new cjs.Rectangle(0,0,2343,2324);
+(lib.Vignett = function() {
+	this.initialize(img.Vignett);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2048,1536);// helper functions:
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
 	clone.gotoAndStop(this.currentFrame);
@@ -993,7 +993,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 (lib.UtKledningTF = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 	// Layer_1
-	this.instance = new lib._572222_Vignett();
+	this.instance = new lib.Vignett();
 	this.instance.parent = this;
 	this.instance.setTransform(100,357,0.293,0.293);
 	this.shape = new cjs.Shape();
@@ -5751,7 +5751,6 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/_572222_Vignett.jpg", id:"_572222_Vignett"},
 		{src:"images/Artboard1.jpg", id:"Artboard1"},
 		{src:"images/Dok_av_eksisterende_bygninger.jpg", id:"Dok_av_eksisterende_bygninger"},
 		{src:"images/ExitButton.png", id:"ExitButton"},
@@ -5774,7 +5773,8 @@ lib.properties = {
 		{src:"images/urbaneuterom_bg.jpg", id:"urbaneuterom_bg"},
 		{src:"images/Utvendig_Kledning.jpg", id:"Utvendig_Kledning"},
 		{src:"images/ValidTextFrame.png", id:"ValidTextFrame"},
-		{src:"images/VAR_Anlegg.jpg", id:"VAR_Anlegg"}
+		{src:"images/VAR_Anlegg.jpg", id:"VAR_Anlegg"},
+		{src:"images/Vignett.jpg", id:"Vignett"}
 	],
 	preloads: []
 };
